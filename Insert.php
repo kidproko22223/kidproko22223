@@ -11,7 +11,7 @@ list-style: none;
 </head>
 <body>
 <h1>INSERT DATA TO DATABASE</h1>
-<h2>Enter data into student table</h2>
+<h2>Enter data into customer table</h2>
 <ul>
     <form name="InsertData" action="Insert.php" method="POST" >
 <li>ID:</li><li><input type="text" name="id" /></li>
@@ -25,7 +25,7 @@ list-style: none;
 
 if (empty(getenv("DATABASE_URL"))){
     echo '<p>The DB does not exist</p>';
-    $pdo = new PDO('pgsql:host=localhost;port=5432;dbname=mydb', 'postgres', 'haipro123');
+    $pdo = new PDO('pgsql:host=localhost;port=5432;dbname=mydb', 'postgres', '123456');
 }  else {
      
    $db = parse_url(getenv("DATABASE_URL"));
@@ -43,7 +43,7 @@ if($pdo === false){
      echo "ERROR: Could not connect Database";
 }
 
-//$stmt = $pdo->prepare('INSERT INTO student (id, toyname, email, telephone) values (:id, :toyname, :email, :telephone)');
+//$stmt = $pdo->prepare('INSERT INTO student (id, toyname, email, telephone) values (:id, :name, :email, :telephone)');
 
 //$stmt->bindParam(':id','SV03');
 //$stmt->bindParam(':name','Ho Hong Linh');
