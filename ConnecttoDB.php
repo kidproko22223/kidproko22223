@@ -17,7 +17,7 @@ if (empty(getenv("DATABASE_URL"))){
      echo getenv("dbname");
    $db = parse_url(getenv("DATABASE_URL"));
    $pdo = new PDO("pgsql:" . sprintf(
-        "host=ec2-174-129-240-67.compute-1.amazonaws.com;port=5432;user=wrflrxtavasvqh;password=fbfef36049fbd28f1200e3a775a389e014838e86522765e67782f9cf7a3f516b;dbname=d3mmhribgmc6bf",
+        "host=ec2-50-19-114-27.compute-1.amazonaws.com ;port=5432;user=rkrhyqmezoltlx;password=67b7ce04b44c5507b8cf05e3be1a2b14ea968e575e90d3241569ea30d830e44d",
         $db["host"],
         $db["port"],
         $db["user"],
@@ -25,21 +25,20 @@ if (empty(getenv("DATABASE_URL"))){
         ltrim($db["path"], "/")
    ));
 }  
-$sql = "SELECT * FROM student ORDER BY stuid";
+$sql = "SELECT * FROM toystore ORDER BY id";
 $stmt = $pdo->prepare($sql);
-//Thiết lập kiểu dữ liệu trả về
 $stmt->setFetchMode(PDO::FETCH_ASSOC);
 $stmt->execute();
 $resultSet = $stmt->fetchAll();
-echo '<p>Students information:</p>';
+echo '<p>Customer information:</p>';
 foreach ($resultSet as $row) {
-	echo $row['stuid'];
+	echo $row['id'];
         echo "    ";
-        echo $row['fname'];
+        echo $row['toyname'];
         echo "    ";
         echo $row['email'];
         echo "    ";
-        echo $row['classname'];
+        echo $row['telephone'];
         echo "<br/>";
 }
 ?>
