@@ -11,11 +11,11 @@ list-style: none;
 </head>
 <body>
 <h1>INSERT DATA TO DATABASE</h1>
-<h2>Enter data into ToyStore table</h2>
+<h2>Enter data into student table</h2>
 <ul>
     <form name="InsertData" action="Insert.php" method="POST" >
-<li>toyid:</li><li><input type="text" name="toyid" /></li>
-<li>toyname:</li><li><input type="text" name="toyname" /></li>
+<li>toyID:</li><li><input type="text" name="toyid" /></li>
+<li>Toy Name:</li><li><input type="text" name="toyname" /></li>
 
 <li><input type="submit" /></li>
 </form>
@@ -40,12 +40,12 @@ if (empty(getenv("DATABASE_URL"))){
 if($pdo === false){
      echo "ERROR: Could not connect Database";
 }
-$sql = "INSERT INTO store(toyid, toyname)"
+$sql = "INSERT INTO toystore(toyid, toyname)"
         . " VALUES('$_POST[toyid]','$_POST[toyname]')";
 $stmt = $pdo->prepare($sql);
 //$stmt->execute();
  if (is_null($_POST[toyid])) {
-   echo "ToyId must be not null";
+   echo "toyid must be not null";
  }
  else
  {
