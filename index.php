@@ -97,7 +97,7 @@
 						<a class="button"> shop now </a>
 					</div>
 				<div class="col-md-6 banner-grid1">
-						<img src="image1.jpg" class="img-responsive" alt=""/>
+						<img src="images/image1.jpg" class="img-responsive" alt=""/>
 				</div>
 				<div class="clearfix"></div>
 			</div>
@@ -113,7 +113,7 @@
 			<h3>Featured products</h3>
 			<div class="gallery-grids">
 				<div class="col-md-3 gallery-grid ">
-					<img src="image2.jpg" class="img-responsive" alt=""/>
+					<img src="images/image2.jpg" class="img-responsive" alt=""/>
 					<div class="gallery-info">
 					<div class="quick">
 					<p><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> view</p>
@@ -138,7 +138,7 @@
 					</div>
 				</div>
 				<div class="col-md-3 gallery-grid">
-						<img src="image3.jpg" class="img-responsive" alt=""/>
+						<img src="images/image3.jpg" class="img-responsive" alt=""/>
 						<div class="gallery-info">
 					<div class="quick">
 					<p><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> view</p>
@@ -163,7 +163,7 @@
 					</div>
 				</div>
 					<div class="col-md-3 gallery-grid">
-						<img src="image4.jpg" class="img-responsive" alt=""/>
+						<img src="images/image4.jpg" class="img-responsive" alt=""/>
 						<div class="gallery-info">
 					<div class="quick">
 					<p><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> view</p>
@@ -188,7 +188,7 @@
 					</div>
 				</div>
 				<div class="col-md-3 gallery-grid">
-						<img src="image5.jpg" class="img-responsive" alt=""/>
+						<img src="images/image5.jpg" class="img-responsive" alt=""/>
 						<div class="gallery-info">
 					<div class="quick">
 					<p><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> view</p>
