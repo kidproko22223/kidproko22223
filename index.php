@@ -1,4 +1,5 @@
 <!DOCTYPE HTML>
+<?php
 <html>
 <head>
 <title>Toys Store</title>
@@ -229,3 +230,4 @@
 
 </body>
 </html>
+?>
