@@ -11,7 +11,7 @@ echo "Welcome to customer";
 <?php
 if (empty(getenv("DATABASE_URL"))){
     echo '<p>The DB does not exist</p>';
-    $pdo = new PDO('pgsql:host=localhost;port=5432;dbname=mydb', 'postgres', 'haipro123');
+    $pdo = new PDO('pgsql:host=localhost;port=5432;dbname=mydb', 'postgres', '123456');
 }  else {
      echo '<p>The DB exists</p>';
      echo getenv("dbname");
