@@ -32,7 +32,7 @@ $stmt = $pdo->prepare($sql);
 $stmt->setFetchMode(PDO::FETCH_ASSOC);
 $stmt->execute();
 $resultSet = $stmt->fetchAll();
-echo '<p>Students information:</p>';
+echo '<p>Toys information:</p>';
 ?>
 <div id="container">
 <table class="table table-bordered table-condensed">
