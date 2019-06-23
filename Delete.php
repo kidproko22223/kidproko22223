@@ -9,7 +9,7 @@
 echo "Insert database!";
 ?>
 <ul>
-    <form name="DeleteData" action="Delete.php" method="POST" >
+    <form name="Delete" action="Delete.php" method="POST" >
 <li>ID:</li><li><input type="text" name="id" /></li>
 <li><button type="submit" value="Submit">Delete</button></li>
 <?php

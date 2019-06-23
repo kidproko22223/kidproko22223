@@ -2,10 +2,11 @@
 <html>
 <body>
 
-<h1>Customer List</h1>
+<h1>DATABASE CONNECTION</h1>
 
 <?php
-echo "Welcome to customer";
+ini_set('display_errors', 1);
+echo "Welcome to Toys Store";
 ?>
 
 <?php
@@ -17,7 +18,7 @@ if (empty(getenv("DATABASE_URL"))){
      echo getenv("dbname");
    $db = parse_url(getenv("DATABASE_URL"));
    $pdo = new PDO("pgsql:" . sprintf(
-         "host=ec2-50-19-114-27.compute-1.amazonaws.com ;port=5432;user=rkrhyqmezoltlx;password=67b7ce04b44c5507b8cf05e3be1a2b14ea968e575e90d3241569ea30d830e44d,dbname=d2b8o7aiucjc2b",
+        "host=ec2-50-19-114-27.compute-1.amazonaws.com ;port=5432;user=rkrhyqmezoltlx;password=67b7ce04b44c5507b8cf05e3be1a2b14ea968e575e90d3241569ea30d830e44d,dbname=d2b8o7aiucjc2b",
         $db["host"],
         $db["port"],
         $db["user"],
@@ -30,17 +31,33 @@ $stmt = $pdo->prepare($sql);
 $stmt->setFetchMode(PDO::FETCH_ASSOC);
 $stmt->execute();
 $resultSet = $stmt->fetchAll();
-echo '<p>Customer information:</p>';
-foreach ($resultSet as $row) {
-	echo $row['id'];
-        echo "    ";
-        echo $row['toyname'];
-        echo "    ";
-        echo $row['email'];
-        echo "    ";
-        echo $row['telephone'];
-        echo "<br/>";
-}
+echo '<p>Toys information:</p>';
 ?>
+<div id="container">
+<table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Toyname</th>
+      </tr>
+    </thead>
+    <tbody>
+      <?php
+        //while($r = mysql_fetch_array($result)){
+             foreach ($resultSet as $row) {
+      ?>
+   
+      <tr>
+        <td scope="row"><?php echo $row['id'] ?></td>
+        <td><?php echo $row['toyname'] ?></td>
+       
+      </tr>
+     
+      <?php
+        }
+      ?>
+    </tbody>
+  </table>
+</div>
 </body>
 </html>
