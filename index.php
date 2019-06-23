@@ -72,16 +72,16 @@
 			        </ul>
                 </li>
                 <li>
-                <a href="ConnectToDB.php" target="_blank" >Connect database</a>
+                <a href="ConnecttoDB.php" target="_blank" >Connect database</a>
                 </li>
                 <li>
-                <a href="InsertData.php" target="_blank" >Insert </a>
+                <a href="Insert.php" target="_blank" >Insert </a>
                 </li>
                 <li>
-                <a href="UpdateData.php" target="_blank" >Update </a> 
+                <a href="Update.php" target="_blank" >Update </a> 
                 </li>
                 <li>
-                <a href="DeleteData.php" target="_blank" >Delete </a> 
+                <a href="Delete.php" target="_blank" >Delete </a> 
                 </li>
 				<li><a>Top</a></li>
 		    </ul>
