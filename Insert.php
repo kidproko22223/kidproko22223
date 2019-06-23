@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
     <head>
-<title>Insert data to PostgreSQL </title>
+<title>Insert data to PostgreSQL</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <style>
 li {
@@ -11,18 +11,18 @@ list-style: none;
 </head>
 <body>
 <h1>INSERT DATA TO DATABASE</h1>
-<h2>Enter data into customer table</h2>
+<h2>Enter data into toys table</h2>
 <ul>
     <form name="Insert" action="Insert.php" method="POST" >
 <li>ID:</li><li><input type="text" name="id" /></li>
 <li>Toy Name:</li><li><input type="text" name="toyname" /></li>
-<li>Email:</li><li><input type="text" name="email" /></li>
-<li>Telephone:</li><li><input type="text" name="telephone" /></li>
+
 <li><input type="submit" /></li>
 </form>
 </ul>
 
 <?php
+
 if (empty(getenv("DATABASE_URL"))){
     echo '<p>The DB does not exist</p>';
     $pdo = new PDO('pgsql:host=localhost;port=5432;dbname=mydb', 'postgres', '123456');
@@ -38,11 +38,13 @@ if (empty(getenv("DATABASE_URL"))){
         ltrim($db["path"], "/")
    ));
 }  
+
 if($pdo === false){
      echo "ERROR: Could not connect Database";
 }
+
 $sql = "INSERT INTO toystore(id, toyname)"
-        . " VALUES('$_POST[id]','$_POST[toyname]')";
+        . " VALUES('$_POST[toyid]','$_POST[toyname]')";
 $stmt = $pdo->prepare($sql);
 //$stmt->execute();
  if (is_null($_POST[id])) {

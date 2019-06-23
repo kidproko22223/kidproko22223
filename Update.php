@@ -9,7 +9,7 @@
 echo "Update database!";
 ?>
 <ul>
-    <form name="UpdateData" action="Update.php" method="POST" >
+    <form name="Update" action="Update.php" method="POST" >
 <li>ID:</li><li><input type="text" name="id" /></li>
 <li>Toy Name:</li><li><input type="text" name="toyname" /></li>
 
@@ -21,7 +21,7 @@ echo "Update database!";
 
 if (empty(getenv("DATABASE_URL"))){
     echo '<p>The DB does not exist</p>';
-    $pdo = new PDO('pgsql:host=localhost;port=5432;dbname=mydb', 'postgres', 'haipro123');
+    $pdo = new PDO('pgsql:host=localhost;port=5432;dbname=mydb', 'postgres', '123456');
 }  else {
      
    $db = parse_url(getenv("DATABASE_URL"));
