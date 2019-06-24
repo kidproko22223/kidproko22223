@@ -50,7 +50,7 @@
         ltrim($db["path"], "/")
         ));
       }  
-      $sql = "SELECT * FROM toystore ORDER BY id";
+      $sql = "SELECT * FROM toystore ORDER BY toyid";
       $stmt = $pdo->prepare($sql);
       $stmt->setFetchMode(PDO::FETCH_ASSOC);
       $stmt->execute();
@@ -72,7 +72,7 @@
           ?>
 
           <tr>
-            <td scope="row"><?php echo $row['id'] ?></td>
+            <td scope="row"><?php echo $row['toyid'] ?></td>
             <td><?php echo $row['toyname'] ?></td>
           </tr>
 

@@ -31,7 +31,7 @@
 		    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Delete</h3>
 		    <p>Delete Store</p>
 		    <form name="DeleteData" action="Delete.php" method="POST">
-		      <input class="w3-input w3-border" type="text" placeholder="ID:" required="" name="id">
+		      <input class="w3-input w3-border" type="text" placeholder="ID:" required="" name="toyid">
 
 		      <button class="w3-button w3-black w3-section" type="submit">
 		        <i class="fa fa-paper-plane"></i> Delete
@@ -57,9 +57,9 @@
         ltrim($db["path"], "/")
         ));
       }  
-      $sql = "DELETE FROM toystore WHERE id = '$_POST[id]'";
+      $sql = "DELETE FROM toystore WHERE toyid = '$_POST[toyid]'";
       $stmt = $pdo->prepare($sql);
-      if (is_null($_POST[id]) == FALSE){
+      if (is_null($_POST[toyid]) == FALSE){
         if($stmt->execute() == TRUE){
           echo "Record deleted successfully.";
         } else {

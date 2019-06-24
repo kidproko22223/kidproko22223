@@ -30,7 +30,7 @@
 		    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Update</h3>
 		    <p>Update Store</p>
 		    <form name="UpdateData" action="Update.php" method="POST">
-		      <input class="w3-input w3-border" type="text" placeholder="ID:" required="" name="id">
+		      <input class="w3-input w3-border" type="text" placeholder="ID:" required="" name="toyid">
           <input class="w3-input w3-section w3-border" type="text" placeholder="Toy Name:" required="" name="toyname">
                     
           <button class="w3-button w3-black w3-section" type="submit">
@@ -57,7 +57,7 @@
         ltrim($db["path"], "/")
         ));
       }  
-      $sql = "UPDATE toystore SET toyname = '$_POST[toyname]'WHERE id = '$_POST[id]'";
+      $sql = "UPDATE toystore SET toyname = '$_POST[toyname]'WHERE toyid = '$_POST[toyid]'";
       $stmt = $pdo->prepare($sql);
       if(is_null($_POST[toyname]) == FALSE){
         if($stmt->execute() == TRUE){
