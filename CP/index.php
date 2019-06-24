@@ -97,7 +97,7 @@
 						<a class="button"> shop now </a>
 					</div>
 				<div class="col-md-6 banner-grid1">
-						<img src="images/image1" class="img-responsive" alt=""/>
+						<img src="images/image1.jpg" class="img-responsive" alt=""/>
 				</div>
 				<div class="clearfix"></div>
 			</div>
