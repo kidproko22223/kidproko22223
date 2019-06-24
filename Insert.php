@@ -30,8 +30,8 @@
 		    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Insert</h3>
 		    <p>Insert information</p>
 		    <form name="InsertData" action="Insert.php" method="POST" >
-		      <input class="w3-input w3-border" type="text" placeholder="ID:" required="" name="toyid">
-		      <input class="w3-input w3-section w3-border" type="text" placeholder="Toy Name:" required="" name="toyname">
+		      <input class="w3-input w3-border" type="text" placeholder="ID:" required="" name="Toyid">
+		      <input class="w3-input w3-section w3-border" type="text" placeholder="Toy Name:" required="" name="Toyname">
 		    	      
 		      <button class="w3-button w3-black w3-section" type="submit">
 		        <i class="fa fa-paper-plane"></i> Insert
@@ -58,10 +58,10 @@
       if($pdo === false){
         echo "ERROR: Could not connect Database";
       }
-      $sql = "INSERT INTO toystore(toyid, toyname)"
-      . " VALUES('$_POST[toyid]','$_POST[toyname]')";
+      $sql = "INSERT INTO toystore(Toyid, Toyname)"
+      . " VALUES('$_POST[toyid]','$_POST[Toyname]')";
       $stmt = $pdo->prepare($sql);
-        if (is_null($_POST[toyid])) {
+        if (is_null($_POST[Toyid])) {
           echo "ID must be not null";
         }
         else{
