@@ -59,7 +59,7 @@
       }  
       $sql = "DELETE FROM toystore WHERE toyid = '$_POST[toyid]'";
       $stmt = $pdo->prepare($sql);
-      if (is_null($_POST[toyid]) == FALSE){
+      if (is_null($_POST[id]) == FALSE){
         if($stmt->execute() == TRUE){
           echo "Record deleted successfully.";
         } else {
